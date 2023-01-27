@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>To_Do_List</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+   <div class="box">
+    <div class="todo">
+        <h2>T O D O</h2>
+    </div>
+    <div class="overlay"></div>
+   </div>
+   <div class="container">
+    <div class="addTask"> 
+        <input type="text" placeholder="Add a Task">
+        <button>ADD</button>
+    </div>
+    <ol class="Active">
+        <h3>Active</h3>    
+    </ol>
+
+    <ol class="Completed">
+        <h3>Completed</h3>
+    </ol>
+    
+   </div>
+   <script>
+    const input =document.querySelector('input');
+    const btn = document.querySelector('.addTask > button');
+    btn.addEventListener('click',addList);
+    input.addEventListener('keyup',(e)=>{
+        (e.keyCode===13? addList(e):null);
+    })
+
+    function addList(e){
+        const act=document.querySelector('.Active');
+        const Completed=document.querySelector('.Completed');
+        const nli=document.createElement('li');
+
+        const c_btn=document.createElement('button');
+        const t_btn=document.createElement('button');
+
+        c_btn.innerHTML='<i class="fa fa-check"></i>';     
+        t_btn.innerHTML='<i class="fa fa-trash"></i>';
+
+        if(input.value!==''){
+            nli.textContent=input.value;
+            input.value='';
+            act.appendChild(nli);
+            
+            nli.appendChild(c_btn);
+            nli.appendChild(t_btn);
+
+        }
+        c_btn.addEventListener('click',function(){
+            const parent = this.parentNode;
+            parent.remove();
+            Completed.appendChild(parent);
+            c_btn.style.display='none';
+        });
+
+        t_btn.addEventListener('click',function(){
+            const parent = this.parentNode;
+            parent.remove();
+        
+        });
+
+    }
+   </script>
+</body>
+</html> 

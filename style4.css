@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    text-align: center;
+}
+.todo{
+    height: 300px;
+    width: 100%;
+    background-image: url("./image/to_do.jpeg");
+    background-size: cover;
+    -webkit-background-size:cover ;
+    background-position: center center;
+    opacity: 0.90;
+}
+.todo h2{
+    position: relative;
+    padding-top: 8%;
+    font-size: 70px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: rgb(240, 50, 50);
+    text-align: left;
+}
+.container{
+    background: rgba(48, 64, 64, 1.0);
+    color: white;
+    height: 70vh;
+    padding: 10px;
+    margin: 0 auto; 
+}
+.addTask > input[type="text"]{
+    width: 50%;
+    color: rgb(84, 83, 83);
+    border: none;
+    border-bottom: 2px solid #666;
+    background: none;
+    padding: 10px;
+    font-size: 22px;
+    outline: none;
+}
+.addTask button{
+    margin: 0 10px;
+    background: #222;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+.Active,.Completed{
+    margin: 2px 0;
+    padding: 10px;
+}
+
+h3{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color:white ;
+}
+ol{
+    list-style: none;
+    counter-reset: count;
+}
+li button{
+    padding: 5px;
+    font-size: 18px;
+    line-height: 18px;
+    float:right ;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+ol li{
+    width: 51.5%;
+    padding: 6px;
+    margin: 5px 0;
+    background: #e969;
+    margin-left: 270px;
+    font-size: 18px;
+    text-align: left;
+    counter-increment: count;
+    padding-bottom: 10px;
+}
+ol li::before{
+    height: 1.5rem;
+    content: counter(count);
+    background: #231381;
+    width: 1.5rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+
