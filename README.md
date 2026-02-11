@@ -3,7 +3,7 @@
 A simple to-do list app built with **vanilla JavaScript**.
 It allows users to add tasks, mark them as completed, and delete them.
 
-![To-Do List App](screenshot.png)
+![To-Do List App](screenshot.jpeg)
 
 ## Features
 - Add tasks (button or Enter key)
