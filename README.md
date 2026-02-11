@@ -1,15 +1,22 @@
-# To-Do List (HTML/CSS/JS)
+# To-Do List (HTML, CSS, JavaScript)
 
-A simple to-do list app built with **vanilla HTML, CSS, and JavaScript**.  
-Add tasks, mark them as completed, or delete them.
+A simple to-do list app built with **vanilla JavaScript**.
+It allows users to add tasks, mark them as completed, and delete them.
+
+![To-Do List App](screenshot.png)
 
 ## Features
-- Add tasks (button or **Enter**)
-- Active + Completed sections
+- Add tasks (button or Enter key)
+- Active and Completed task sections
 - Delete tasks
 
-## Tech
-HTML • CSS • JavaScript • Font Awesome
+## Tech Used
+HTML • CSS • JavaScript (Vanilla JS)
 
-## Run
-Just open `index.html` in your browser.
+## How to Run
+Open `index.html` in your browser. No setup required.
+
+## What I Learned
+- DOM manipulation
+- Event handling in JavaScript
+- Basic UI interactions
